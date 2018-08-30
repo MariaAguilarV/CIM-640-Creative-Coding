@@ -8,6 +8,6 @@ Sometimes, when I have many upcoming assignments, I spend more time thinking of 
 
 3. Finally, the application will give you a schedule with daily responsibilities. Based on previous experience from other users, the application will distribute all the activities in different days taking into consideration their due dates, the time each one takes to finish, meal hours, enough sleep, etc. You only need to follow the plan to finish your assignments on date! The planner will also keep track of social media activity and it will show notifications when you are spending too much time on social media and have upcoming assignments.   
 
-![impossible app1](Hw/imposible app p1.jpg)
+![impossible app](https://github.com/MariaAguilarV/CIM-640-Creative-Coding/blob/master/Hw/imposible%20app%20p1.jpg)
 
-![impossible app2](https://github.com/MariaAguilarV/CIM-640-Creative-Coding/blob/master/Hw/impossible%20app%20p2.jpg)
+![impossible app](https://github.com/MariaAguilarV/CIM-640-Creative-Coding/blob/master/Hw/impossible%20app%20p2.jpg)
