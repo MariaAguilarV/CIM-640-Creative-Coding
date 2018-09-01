@@ -10,4 +10,4 @@
 2. To see the menu to commit and push to github: main menu -> View -> Toggle Git Tab
 3. To see  my text in Markdown: main menu -> Packages -> Markdown preview -> Toggle preview
 
-For example of Markdown in Atom see ![example Hello Markdown](hello.md)
+For example of Markdown in Atom see ![file hello.md](hello.md)
