@@ -5,6 +5,12 @@ var word = "word";
 var trueFalse = true; //camelcase: start with lowercasse, it is case sensitive
 var sentences = "I am a sentence";
 
+var charColor = "orange"; //it doesn't mean that this color will be the same always, it can change over time
+var eyeSize = 20;
+
+var facePosX = 100;
+var facePosY = 100;
+
 function setup() {
   // put setup code here
   createCanvas(400,400);
@@ -25,24 +31,36 @@ function setup() {
 
 function draw() {
   // put drawing code here
+
+  background ("#333363"); //it help to not override again and again and again
+
+  // set our variables x and y with the mouse
+  facePosX = mouseX;
+  facePosY = mouseY;
+
   stroke ('black');
   strokeWeight(num1);
 
-  fill('orange');
+  fill(charColor);
   // eyes
-  ellipse(120,120,50,50);
-  ellipse (180,120,50,50);
+  ellipse(facePosX,facePosY,eyeSize,eyeSize);
+  ellipse (facePosX + 60,facePosY,eyeSize,eyeSize);
   //mouth
-  rect (120,220,50,20);
+  rect (facePosX,facePosY + 200,50,20);
 
 //mole
   stroke('red');
   strokeWeight(5);
   point(width/2, height/2);
 
-  line(120,230,170,230);
+  line(facePosX,facePosY+210,facePosX + 50,facePosY + 210);
 
   //pacperson
-  arc(50,200,100,100,QUARTER_PI, PI + HALF_PI + QUARTER_PI);
-  arc(50,350,100,100,QUARTER_PI, TWO_PI - QUARTER_PI);
+  //arc(50,200,100,100,QUARTER_PI, PI + HALF_PI + QUARTER_PI);
+  arc(facePosX + 30,facePosY + 100,100,100,QUARTER_PI, TWO_PI - QUARTER_PI);
+}
+
+// thw browser always listen if the mouse is pressed
+function mousePressed(){
+  charColor = "green";
 }
