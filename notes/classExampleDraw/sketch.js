@@ -52,6 +52,7 @@ function draw() {
   stroke('red');
   strokeWeight(5);
   point(width/2, height/2);
+  //curve(120, 100, 160, 200, 120, 300, 160, 400, 120, 450, 160, 460);
 
   line(facePosX,facePosY+210,facePosX + 50,facePosY + 210);
 
