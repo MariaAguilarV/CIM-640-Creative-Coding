@@ -43,3 +43,6 @@ is a good practice to use "Assets" where I should save all my images
 
 .png is recommended to be used in p5js
 in png we can have the background transparent
+
+if the image can't be loaded, we install the package atom live server
+Then Packages -> atom live server -> run server -> it will open my browser and I have to find the file.
