@@ -52,6 +52,16 @@ function draw() {
   ellipse (headPosX + 18,headPosY-22,23,15);
   ellipse (headPosX + 18,headPosY-5,20,10);
 
+    //eyeslashes
+    noFill();
+    arc(headPosX - 23,headPosY-37, 15, 15, HALF_PI, PI);
+    arc(headPosX - 25,headPosY-35, 15, 15, HALF_PI, PI);
+    arc(headPosX - 27,headPosY-33, 15, 15, HALF_PI, PI);
+
+    arc(headPosX + 23,headPosY-37, 15, 15, 0, HALF_PI);
+    arc(headPosX + 25,headPosY-35, 15, 15, 0, HALF_PI);
+    arc(headPosX + 27,headPosY-33, 15, 15, 0, HALF_PI);
+
   //mouth
   fill("black");
   beginShape();
@@ -79,6 +89,6 @@ function draw() {
 
   //tooth
   fill("white");
-  quad(headPosX+20, headPosY+10, headPosX+23, headPosY+20,headPosX+15,headPosY+23,headPosX+12,headPosY+13);
-  quad(headPosX-20, headPosY+10, headPosX-23, headPosY+20,headPosX-15,headPosY+23,headPosX-12,headPosY+13);
+  quad(headPosX+20, headPosY+10, headPosX+23, headPosY+18,headPosX+15,headPosY+21,headPosX+12,headPosY+13);
+  quad(headPosX-20, headPosY+10, headPosX-23, headPosY+18,headPosX-15,headPosY+21,headPosX-12,headPosY+13);
 }
