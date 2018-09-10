@@ -91,4 +91,11 @@ function draw() {
   fill("white");
   quad(headPosX+20, headPosY+10, headPosX+23, headPosY+18,headPosX+15,headPosY+21,headPosX+12,headPosY+13);
   quad(headPosX-20, headPosY+10, headPosX-23, headPosY+18,headPosX-15,headPosY+21,headPosX-12,headPosY+13);
+
+  //arms
+  fill("white");
+  beginShape();
+  vertex(bodyPosX-40, bodyPosY-70);
+  bezierVertex(bodyPosX-170, bodyPosY-55,bodyPosX-180, bodyPosY-30, bodyPosX-80, bodyPosY-45);
+  endShape();
 }
