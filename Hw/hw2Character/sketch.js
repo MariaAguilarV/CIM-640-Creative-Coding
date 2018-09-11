@@ -111,7 +111,7 @@ function draw() {
   quad(headPosX-20, headPosY+10, headPosX-23, headPosY+18,headPosX-15,headPosY+21,headPosX-12,headPosY+13);
 
   //hair
-  fill("black");
+  fill("white");
   beginShape();
   vertex(headPosX - 20, headPosY - 58);
   bezierVertex(headPosX-5,headPosY - 65,headPosX-10,headPosY -45,headPosX-10,headPosY - 88);
