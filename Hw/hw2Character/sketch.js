@@ -29,13 +29,13 @@ function draw() {
 
   // put drawing code here
   //reference points
-  point(100, 50);
+  /*point(100, 50);
   point(200, 50);
   point(300, 50);
 
   point(100, 100);
   point(200, 100);
-  point(300, 100);
+  point(300, 100);*/
 
   //head
   fill (bodyColor);
