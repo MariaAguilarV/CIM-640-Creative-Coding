@@ -3,20 +3,22 @@ var headPosY = 120;
 
 var bodyPosX = headPosX;
 var bodyPosY = headPosY + 110;
-var bodyWidth = 175
-var bodyHeight = 140
+var bodyWidth = 175;
+var bodyHeight = 140;
 
+var bodyColor = "#ECECEC";
+var backgroundColor = "#1F165B";
 
 function setup() {
   // put setup code here
   createCanvas(400,400);
-  background(31,22,91);
+  background(backgroundColor);
 }
 
 function draw() {
 
 // this section is to move the draw
-  background (31,22,91);
+  background (backgroundColor);
 
   headPosX = mouseX;
   headPosY = mouseY;
@@ -36,7 +38,7 @@ function draw() {
   point(300, 100);
 
   //head
-  fill (236,236,236);
+  fill (bodyColor);
   ellipse (headPosX,headPosY,150,120);
 
   //body
@@ -131,7 +133,7 @@ function draw() {
   endShape();
 
   //arms
-  fill (236,236,236);
+  fill (bodyColor);
   beginShape();
   vertex(bodyPosX-(bodyWidth/5), bodyPosY-(bodyHeight/2)+5);
   bezierVertex(bodyPosX-150, bodyPosY-90,bodyPosX-165, bodyPosY-10, bodyPosX-(bodyWidth/3), bodyPosY-(bodyHeight/3));
@@ -145,7 +147,7 @@ function draw() {
 
   //legs
   //right leg
-  fill (236,236,236);
+  fill (bodyColor);
   beginShape();
   vertex(bodyPosX+(bodyWidth/9), bodyPosY+ (bodyHeight/2)-5);
   bezierVertex(bodyPosX+33, bodyPosY+133,bodyPosX+80, bodyPosY+135, bodyPosX+(bodyWidth/3.5), bodyPosY+(bodyHeight/2)-15);
