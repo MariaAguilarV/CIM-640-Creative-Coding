@@ -7,10 +7,15 @@ var bodyWidth = 175;
 var bodyHeight = 140;
 
 var bodyColor = "#ECECEC";
-var backgroundColor = "#1F165B";
 var chipsColor = "#6B4D20";
 var chocolateColor = "#E4C18C";
 var strawberryColor = "#F9A291";
+
+//backgournd colors
+
+var r = 31;
+var g = 22;
+var b = 91;
 
 var moodHappy = false;
 var cookieShow1 = true;
@@ -27,18 +32,36 @@ var cookie2Y = 200;
 var cookie3X = 500;
 var cookie3Y = 100;
 
-var cookie4X = 410;
-var cookie4Y = 310;
+var cookie4X = 380;
+var cookie4Y = 280;
 
 function setup() {
   // put setup code here
+  frameRate (10);
   createCanvas(600,400);
-  background(backgroundColor);
+  background(r,g,b);
 }
 
 function draw() {
 
-  background(backgroundColor);
+  background(r,g,b);
+  //Instructions
+  fill ("white");
+
+  textSize(14);
+  textFont ('Georgia');
+  text("Press the cookies",420,310);
+
+  textSize(14);
+  textFont ('Georgia');
+  text("to feed him!",435,330);
+
+  textSize(11);
+  textFont ('Helvetica');
+  text("TIP 1: He loves chocolate cookies.",380,360);
+  text("TIP 2: He doesn't like strawberry cookies.",380,380);
+
+
   //head
   fill (bodyColor);
   ellipse (headPosX,headPosY,150,120);
@@ -240,6 +263,16 @@ function draw() {
      ellipse(cookie4X, cookie4Y+10,8,8);
  }
 
+// Interaction 2
+  if (moodHappy==true){
+    r=random(256);
+    g=random(256);
+    b=random(256);
+  } else {
+    r = 31;
+    g = 22;
+    b = 91;
+  }
 }
 
 
