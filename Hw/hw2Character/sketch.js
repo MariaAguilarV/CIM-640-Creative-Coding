@@ -18,13 +18,13 @@ function setup() {
 function draw() {
 
 // this section is to move the draw
-  background (backgroundColor);
-
-  headPosX = mouseX;
-  headPosY = mouseY;
-
-  var bodyPosX = headPosX;
-  var bodyPosY = headPosY + 110;
+  // background (backgroundColor);
+  //
+  // headPosX = mouseX;
+  // headPosY = mouseY;
+  //
+  // var bodyPosX = headPosX;
+  // var bodyPosY = headPosY + 110;
 // ends the movement section
 
   // put drawing code here
