@@ -21,7 +21,7 @@ function preload(){
 }
 function setup() {
   // put setup code here
-  frameRate(10);
+  frameRate(10); //how much time fro the frame to refresh
   createCanvas(400,400);
 }
 
