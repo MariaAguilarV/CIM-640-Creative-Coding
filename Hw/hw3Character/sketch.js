@@ -264,7 +264,7 @@ function draw() {
  }
 
 // Interaction 2
-  if (moodHappy==true){
+  if (moodHappy==true && cookieShow1==false && cookieShow2==false){
     r=random(256);
     g=random(256);
     b=random(256);
