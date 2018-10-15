@@ -1,4 +1,4 @@
-// var frameAmounts = 18; //we will use arrays in order to load multiple images
+// var frameAmounts = 18;
 // var frameArray=[];
 // var currentFrame=0;
 // var interval = 500; // 2000 means 2 seconds
@@ -16,6 +16,10 @@
 // var winner = false;
 // var end = false;
 //
+// var numberOfHearts = 4;
+// var numberOfCatchedHearts = 0;
+// var heartsArray;
+//
 // function preload (){
 //
 //   for (var frames=0; frames < frameAmounts; frames++){
@@ -23,6 +27,12 @@
 //     frameArray[frames] = loadImage(frameString);
 //   }
 //   heart = loadImage('AssetsElephant/heart.png');
+//   heartsArray = {
+//                   "heart1":[300,0,15,3,true],
+//                   "heart2":[200,0,17,1,true],
+//                   "heart3":[400,-20,20,3,true],
+//                   "heart4":[400,-0,25,4,true]
+//   }
 // }
 //
 // function setup(){
@@ -48,12 +58,17 @@
 //   if (transition1 == false && play == true && winner == false){
 //
 //       image (frameArray[10],0,0);
-//       image(heart,xPos, yPos, heart.width/15, heart.height/15);
-//       yPos+=speed;
+//       for (var keys in heartsArray){
+//           console.log(keys + " values:" + heartsArray[keys]);
+//           if (heartsArray[keys][4] == true){
+//             image(heart,heartsArray[keys][0], heartsArray[keys][1], heart.width/heartsArray[keys][2], heart.height/heartsArray[keys][2]);
+//              heartsArray[keys][1]+=heartsArray[keys][3];
 //
-//         if (yPos > height){
-//           play = false;
-//           winner = false;
+//               if (heartsArray[keys][1] > height){
+//                 play = false;
+//                 winner = false;
+//               }
+//           }
 //         }
 //   }
 //
@@ -81,18 +96,25 @@
 // }
 //
 // function mousePressed(){
-//   var heartDist = dist(mouseX, mouseY, xPos, yPos);
-//   if (heartDist < heart.width/15){
+//   for (keys in heartsArray){
+//     var heartDist = dist(mouseX, mouseY, heartsArray[keys][0], heartsArray[keys][1]);
+//     if (heartDist < heart.width/heartsArray[keys][2]){
+//       heartsArray[keys][4] = false;
+//       numberOfCatchedHearts++;
+//     }
+//
+//   }
+//
+//   if (numberOfCatchedHearts == numberOfHearts) {
 //     winner = true;
 //     currentFrame = 12;
 //     play = false;
 //   }
 // }
 
+//random numero de corazones
 
-// test more than one heart
-
-var frameAmounts = 18; //we will use arrays in order to load multiple images
+var frameAmounts = 18;
 var frameArray=[];
 var currentFrame=0;
 var interval = 500; // 2000 means 2 seconds
@@ -110,9 +132,9 @@ var play= false;
 var winner = false;
 var end = false;
 
-var numberOfHearts = 4;
+var numberOfHearts = 0;
 var numberOfCatchedHearts = 0;
-var heartsArray;
+var heartsArray = [];
 
 function preload (){
 
@@ -121,20 +143,26 @@ function preload (){
     frameArray[frames] = loadImage(frameString);
   }
   heart = loadImage('AssetsElephant/heart.png');
-  heartsArray = {
-                  "heart1":[300,0,15,3,true],
-                  "heart2":[200,0,17,1,true],
-                  "heart3":[400,-20,20,3,true],
-                  "heart4":[400,-0,25,4,true]
-  }
 }
 
 function setup(){
   createCanvas(700,525);
+  numberOfHearts = int(random(1,5));
+  for (var i=0; i<numberOfHearts; i++){
+    heartsArray.push(new heartGenerator());
+  }
+}
 
+function heartGenerator() {
+  this.x = random(600);
+  this.y = 0;
+  this.width = random(5,15);
+  this.speed = random(1,5);
+  this.show = true;
 }
 
 function draw(){
+
 
   if (transition1 == true && play == false && winner == false){
     image (frameArray[currentFrame],0,0);
@@ -152,13 +180,14 @@ function draw(){
   if (transition1 == false && play == true && winner == false){
 
       image (frameArray[10],0,0);
-      for (var keys in heartsArray){
-          console.log(keys + " values:" + heartsArray[keys]);
-          if (heartsArray[keys][4] == true){
-            image(heart,heartsArray[keys][0], heartsArray[keys][1], heart.width/heartsArray[keys][2], heart.height/heartsArray[keys][2]);
-             heartsArray[keys][1]+=heartsArray[keys][3];
+      for (var i=0; i<heartsArray.length; i++){
+         console.log("number of hearts:" + numberOfHearts);
+          console.log(heartsArray[i].x);
+          if (heartsArray[i].show == true){
+            image(heart,heartsArray[i].x, heartsArray[i].y, heart.width/heartsArray[i].width, heart.height/heartsArray[i].width);
+             heartsArray[i].y+=heartsArray[i].speed;
 
-              if (heartsArray[keys][1] > height){
+              if (heartsArray[i].y > height){
                 play = false;
                 winner = false;
               }
@@ -190,10 +219,10 @@ function draw(){
 }
 
 function mousePressed(){
-  for (keys in heartsArray){
-    var heartDist = dist(mouseX, mouseY, heartsArray[keys][0], heartsArray[keys][1]);
-    if (heartDist < heart.width/heartsArray[keys][2]){
-      heartsArray[keys][4] = false;
+  for (var i=0; i<heartsArray.length; i++){
+    var heartDist = dist(mouseX, mouseY, heartsArray[i].x, heartsArray[i].y);
+    if (heartDist < heart.width/heartsArray[i].width){
+      heartsArray[i].show = false;
       numberOfCatchedHearts++;
     }
 
