@@ -1,6 +1,6 @@
 # Title
 ### Let's play with Trompita!
-[Click here to see it](https://mariaaguilarv.github.io/CIM-640-Creative-Coding/Hw/Midterm/index.html)
+[Click here to play](https://mariaaguilarv.github.io/CIM-640-Creative-Coding/Hw/Midterm/index.html)
 
 # Explanation:
 * Why are you making this project? What is your motivation?
