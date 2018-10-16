@@ -1,13 +1,14 @@
 # Title
 ### Let's play with Trompita!
+[Click here to see it](https://mariaaguilarv.github.io/CIM-640-Creative-Coding/Hw/Midterm/index.html)
 
 # Explanation:
 * Why are you making this project? What is your motivation?
 Going shopping with kids might be really challenging, angry parents and bored children are a common situation in stores, specially in clothes stores. The other day, I went shopping with my family and I saw these screens on some walls showing some random content, then I thought, why wouldn't they use these screens for interactive activities for kids?
 
-The images below gave me the idea for this project. Although, it can be seen a game (pacman) showed in the screen, it wasn't interactive, thus I decided to create an easy animation for little kids. The main character of this story is "Trompita", the elephant's name of my nephew's favorite song. 
+The images below gave me the idea for this project. Although, it can be seen a game (pacman) showed in the screen, it wasn't interactive, thus I decided to create an easy interactive animation for little kids. The main character of this story is "Trompita", the elephant's name of my nephew's favorite song.
 
-![screen store 1](AssetsElephantEnhanced/ScreenStore1.jpg)
+![screen store 1](AssetsElephantEnhanced/ScreenStore1.jpg )
 ![screen store 2](AssetsElephantEnhanced/ScreenStore2.jpg)
 
 * What are your inputs?
@@ -29,4 +30,4 @@ The images below gave me the idea for this project. Although, it can be seen a g
 <br> My target audience are kids, specially from 3 to 7 years old, who tend to get bored easily. The game's simplicity and story will be a fun way to keep the little ones busy while parents are buying!
 
 * Where will your project be displayed?
-I would project this game in big screens in the wall of stores. I would use a screen as the one showed above.
+<br> I would project this game in big screens in the wall of stores. I would use a screen as the one showed above.
