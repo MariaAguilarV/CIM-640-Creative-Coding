@@ -21,6 +21,8 @@ var numberOfHearts = 0;
 var numberOfCatchedHearts = 0;
 var heartsArray = [];
 
+var title;
+
 function preload (){
 
   for (var frames=0; frames < frameAmounts; frames++){
@@ -28,7 +30,7 @@ function preload (){
     frameArray[frames] = loadImage(frameString);
   }
   heart = loadImage('AssetsElephantEnhanced/heartBallon.png');
-
+  title = loadImage('AssetsElephantEnhanced/title.png');
 
 }
 
@@ -105,7 +107,7 @@ function draw(){
     image (frameArray[11],0,0);
     //rect (470,370,150,50);
   }
-
+image (title,70,490,500,40);
 }
 
 function mousePressed(){
