@@ -18,10 +18,10 @@ Image 2:
 
 * **What are your outputs?**<br>
   * Trompita will jump when the up arrow is pressed. The more times the up arrow is consequently pressed, the higher Trompita will jump.
- * When the play button is pressed, the game will start.
- * When the stop button is pressed, the game will stop.
- * When Trompita touches one fire ring, he will loose a life and a heart will disappear.
- * Trompita has only 3 lives (3 hearts) until the game is over.
+  * When the play button is pressed, the game will start.
+  * When the stop button is pressed, the game will stop.
+  * When Trompita touches one fire ring, he will loose a life and a heart will disappear.
+  * Trompita has only 3 lives (3 hearts) until the game is over.
 
 
 * **Who is the target audience for your project?** <br>
