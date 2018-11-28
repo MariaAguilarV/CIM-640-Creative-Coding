@@ -57,12 +57,33 @@ Image 4:
 The target audience for my project are kids from 6 to 9 years old who are learning basic math. It is also the age when they are able to read and understand the instructions.
 
 * **Where will your project be displayed?** <br>
-The game could be displayed in big screens from stores or shopping malls. When parents are buying, kids could be playing this simple game while learning math. 
+The game could be displayed in big screens from stores or shopping malls. When parents are buying, kids could be playing this simple game while learning math.
 
 ## Idea 3
 
-* Why are you making this project? What is your motivation?
-* What are your inputs?
-* What are your outputs?
-* Who is the target audience for your project?
-* Where will your project be displayed?
+* **Why are you making this project? What is your motivation?** <br>
+My favorite season of the year is Christmas! This is why I decided to make an interactive Christmas card combining my two previous ideas. As shown in my prototype in Image 5, it will have different bubbles floating around and once they are touched different elements will be showing in the screen. A christmas tree will appear, then snow will come down, a snowman and christmas music will be played. I also want this game to be interactive for kids to enjoy it, so at the end of the game, the player will clap and see some surprise fireworks.
+
+When thinking on this idea, I tried the paper prototyping with my little niece (5 years old) and she really liked the idea. Image 6 shows her draw.
+
+Image 5:
+![alt text](assets/idea3.jpg)
+
+Image 6:
+![alt text](assets/idea3Tested.jpg)
+
+* **What are your inputs?**
+  * Touch - The players will touch the screen with their fingers to pop the bubbles.
+  * Sound - At the end of the game, the player will have to clap to see fireworks in the screen.
+
+
+* **What are your outputs?**
+  * When a bubble is touched, it will disappear and a new element will be shown in the card. The letter "T" will show a tree, the letter "M" will play music, the letter "S" will show snow falling down, the letter "G" will show gifts in the tree, and the letter "L" will change the night background and turn on the lights in the house.
+  * At the end, an instruction will appear for the player to clap, it will track the intensity of the sound, and at one specific intensity it will show fireworks in the sky.
+
+
+* **Who is the target audience for your project?** <br>
+My target audience are kids from 5 to 7 years old.
+
+* **Where will your project be displayed?** <br>
+The game could be displayed in big screens from stores or shopping malls. When parents are buying, kids could be playing this simple game while learning math.
