@@ -16,7 +16,7 @@ Image 2:
   * The user will click the buttons Play and Stop at any time during the game.
 
 
-* **What are your outputs?**
+* **What are your outputs?**<br>
   * Trompita will jump when the up arrow is pressed. The more times the up arrow is consequently pressed, the higher Trompita will jump.
  * When the play button is pressed, the game will start.
  * When the stop button is pressed, the game will stop.
