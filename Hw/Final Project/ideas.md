@@ -12,8 +12,8 @@ Image 2:
 ![alt text](assets/idea1.jpg)
 
 * **What are your inputs?**<br>
-  * The user could use the arrows on the keyboard to move Trompita and jump through the fire rings.
-  * The user will click the buttons Play and Stop at any time during the game.
+  * The player could use the arrows on the keyboard to move Trompita and jump through the fire rings.
+  * The player will click the buttons Play and Stop at any time during the game.
 
 
 * **What are your outputs?**<br>
@@ -33,11 +33,31 @@ The game could be played in a tablet or computer.
 
 ## Idea 2
 
-* Why are you making this project? What is your motivation?
-* What are your inputs?
-* What are your outputs?
-* Who is the target audience for your project?
-* Where will your project be displayed?
+* **Why are you making this project? What is your motivation?** <br>
+I played a mobile game app called Fruit Ninja for a long time ago. In the game, the player had to slice fruit that is thrown into the air by swiping the device's touch screen with their finger(s) (as shown in Image 3).
+I want to mix a new version of this game with math and help little kids to learn math in a fun way. As shown in the prototype in Image 4, the game would have floating bubbles with numbers and the player will have different math challenges, for example, catching multiple numbers of 2 or sorting numbers by size, small to large. If the player catches the wrong number, then all bubbles will explode and the game will be over.
+
+Image 3:
+![alt text](assets/FruitImage.jpg)
+
+Image 4:
+![alt text](assets/idea2.jpg)
+
+* **What are your inputs?**
+  * The players will touch the screen with their fingers to pop the bubbles.
+
+
+* **What are your outputs?**
+  * When a bubble is touched it will disappear.
+  * If the wrong bubble is touched the game will be over.
+  * The player will see in the screen different challenges with instructions.
+
+
+* **Who is the target audience for your project?**<br>
+The target audience for my project are kids from 6 to 9 years old who are learning basic math. It is also the age when they are able to read and understand the instructions.
+
+* **Where will your project be displayed?** <br>
+The game could be displayed in big screens from stores or shopping malls. When parents are buying, kids could be playing this simple game while learning math. 
 
 ## Idea 3
 
