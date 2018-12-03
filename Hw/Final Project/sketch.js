@@ -123,6 +123,7 @@ function setup() {
     bubble.scale = objScale;
     bubble.mass = bubble.scale;
     bubbles.add(bubble);
+    
 
     var abcImg = createSprite(posX, posY, objWidth, objHeight);
 
