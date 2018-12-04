@@ -95,7 +95,7 @@ function preload (){
 
     spritesheet = loadImage('assets/flakes32.png'); //snow
 
-    soundFile = loadSound('assets/christmasSongv1.mp3'); //music
+    soundFile = loadSound('assets/christmasSongv2.mp3'); //music
 }
 
 function setup() {
@@ -123,7 +123,7 @@ function setup() {
     bubble.scale = objScale;
     bubble.mass = bubble.scale;
     bubbles.add(bubble);
-    
+
 
     var abcImg = createSprite(posX, posY, objWidth, objHeight);
 
