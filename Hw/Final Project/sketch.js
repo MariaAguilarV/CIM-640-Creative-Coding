@@ -1,53 +1,12 @@
-// var cityImg, groundImg;
-// var bubbleImg;
-// var bubble;
-//
-// function preload (){
-//     cityImg = loadImage('assets/city_bg3.png');
-//     groundImg = loadImage ('assets/ground.png');
-//     bubbleImg = loadImage ('assets/bubble.png');
-// }
-//
-// function setup() {
-//   createCanvas(1000, 600);
-//   bubble = new Bubble ();
-//
-// }
-//
-// function draw() {
-//   background("green");
-//   // background(16,12,46);
-//   image(cityImg, 0, 250);
-//   image(groundImg, 0, 510);
-//   // image (bubbleImg, 20,20, bubbleImg.width/1.2, bubbleImg.height/1.2);
-//   bubble.move();
-//   bubble.show();
-//
-// }
-//
-// class Bubble {
-//   constructor (){
-//     this.x = 20;
-//     this.y = 20;
-//     this.size = 1.2;
-//     this.img = bubbleImg;
-//   }
-//   move (){
-//     this.x = this.x + random(-5,5);
-//     this.y = this.y + random(-5, 5);
-//   }
-//   show (){
-//     image (this.img, this.x, this.y, this.img.width/this.size, this.img.height/this.size);
-//   }
-// }
-
-// ---* version 2 starts here *---
 var cityImg, groundImg, houseImg, groundWhite;
 var bubbles, alphabet;
 var tree;
 var grounAnimation;
 var present1, present2, present3, present4;
-var lightAnimation, lightTreeAnimation;
+var lightAnimation, lightTreeAnimation, dancingAnimation, cookieLeftAnimation, cookieRightAnimation, cookieGreetingAnimation;
+var gingerManImg;
+var dialogBoxImg, dialogBoxImg2;
+var scrollGreetingImg;
 
 var letterTPlay=false;
 var letterSPlay=false;
@@ -68,7 +27,7 @@ var soundFile;
 var mic;
 var sliderTop;
 var sliderBottom;
-var clapping = false;
+// var clapping = false;
 
 var fireworks = [];
 var gravity;
@@ -82,7 +41,12 @@ function preload (){
     present2 = loadImage ('assets/presents/present2.png');
     present3 = loadImage ('assets/presents/present3.png');
     present4 = loadImage ('assets/presents/present4.png');
+    gingerManImg = loadImage ('assets/GingerMan3.png');
+    cookieGreetingsImg = loadImage ('assets/cookieGreetings.png');
 
+    //Dialog Boxes
+    dialogBoxImg = loadImage ('assets/dialogBox.png');
+    dialogBoxImg2 = loadImage ('assets/dialogBox2.png');
 
     tree = loadAnimation ('assets/christmasTree/tree0.png', 'assets/christmasTree/tree12.png');
     tree.looping = false;
@@ -92,6 +56,11 @@ function preload (){
 
     lightAnimation = loadAnimation ('assets/lights/light0.png', 'assets/lights/light1.png');
     lightTreeAnimation = loadAnimation ('assets/lights/christmasLight0.png', 'assets/lights/christmasLight1.png');
+
+    dancingAnimation = loadAnimation ('assets/Dancing/cookiesDancing0.png', 'assets/Dancing/cookiesDancing2.png');
+    cookieLeftAnimation = loadAnimation('assets/Dancing/CookieLeft0.png', 'assets/Dancing/CookieLeft5.png');
+    cookieRightAnimation = loadAnimation('assets/Dancing/CookieRight0.png', 'assets/Dancing/CookieRight7.png');
+    cookieGreetingAnimation = loadAnimation('assets/Dancing/cookieGreeting0.png', 'assets/Dancing/cookieGreeting3.png');
 
     spritesheet = loadImage('assets/flakes32.png'); //snow
 
@@ -173,17 +142,30 @@ function draw() {
   image(groundImg, 0, 510);
   image(houseImg,330,250);
 
+  //show dialog box with instructions first, fireworks must be false
+  if (fireworksOn==false){
+    image(gingerManImg, 50,400);
+    image(dialogBoxImg, 120,320);
+  }
+
+  if (fireworksOn==false && letterTPlay == true && letterSPlay==true && letterGPlay==true && letterLPlay==true && letterMPlay==true){
+    image(gingerManImg, 50,400);
+    image(dialogBoxImg2, 120,320);
+  }
+
   bubbles.bounce(bubbles);
   alphabet.bounce(alphabet);
 
   if (fireworksOn==true) {
     letterSPlay = false;
       image(groundWhite, 0, 510);
+      // image(gingerManImg, 50,400);
   }
 
 
   if (letterSPlay== true){
      animation(groundAnimation,500,555);
+     // image(gingerManImg, 50,400);
   }
 
 
@@ -309,14 +291,14 @@ function draw() {
  var vol = mic.getLevel();
  var thresholdTop = sliderTop.value();
  var thresholdBottom = sliderBottom.value();
- if (vol > thresholdTop && !clapping  && letterTPlay==true && letterGPlay==true && letterMPlay==true) {
+ if (vol > thresholdTop && !fireworksOn  && letterTPlay==true && letterGPlay==true && letterMPlay==true) {
    fireworksOn= true;
-   clapping = true;
+   // clapping = true;
  }
 
- if (vol < thresholdBottom) {
-   clapping = false;
- }
+ // if (vol < thresholdBottom) {
+ //   clapping = false;
+ // }
 
  fill(0, 255, 0);
  //console.log(vol);
@@ -358,28 +340,40 @@ function fallSnow(){
 }
 
 function playMusic() {
-  // while (soundFile.isPlaying()==false){
-  //     soundFile.play();
-  // }
  if (soundFile.isPlaying()==false) soundFile.play();
+ // dancingAnimation.frameDelay = 10;
+ // animation(dancingAnimation,220,500);
+ cookieLeftAnimation.frameDelay = 10;
+ animation(cookieLeftAnimation,0,250);
+ cookieRightAnimation.frameDelay = 10;
+ animation(cookieRightAnimation,982,150);
+ // image (cookieLeftImg,-5,250);
+ // console.log (dancingAnimation.getFrame());
+
 }
 
 function showPresents() {
+   image(present4, 710, 435);
    image(present1, 920, 430);
    image(present2, 720, 500);
    image(present3, 800, 500);
-   image(present4, 850, 500);
 }
 
 
 function playfireworks(){
   // background(16,12,46);
+  cookieLeftAnimation.visible = false;
+  cookieRightAnimation.visible = false;
+  // image (cookieGreetingsImg,50,400);
+   cookieGreetingAnimation.frameDelay = 8;
+  animation (cookieGreetingAnimation, 200,460);
+
   stroke(255);
   strokeWeight(10);
-  console.log ("maki");
+  console.log (" Hello maki");
   colorMode(RGB);
   if (random(1) < 0.03) {
-    console.log ("maki1");
+    console.log ("here I am maki1");
     fireworks.push(new Firework());
   }
   for (var i = fireworks.length - 1; i >= 0; i--) {
