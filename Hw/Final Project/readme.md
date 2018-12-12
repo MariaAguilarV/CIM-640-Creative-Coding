@@ -10,8 +10,7 @@ In class, we had a final project ideation workshop (technique developed by Zanna
 * **Why are you making this project? What is your motivation?** <br>
 My favorite season of the year is Christmas! This is why I decided to make an interactive Christmas card combining my two previous ideas. It has different bubbles floating around and once they are touched different elements will be showing in the screen. A christmas tree will appear, then snow will come down, a snowman and christmas music will be played. I also want this game to be interactive for kids to enjoy it, so at the end of the game, the player will clap and see some surprise fireworks.
 Furthermore, I added a gingerbread cookie to give instructions as he were talking and showing some fun messages to the player.
-I also liked this idea because my niece (5 years old) loved it!
-
+I also liked this idea because my niece (5 years old) loved it!<br>
 Developing my interactive christmas card has been a challenging project because with no previous experience on design tools, it took me a while to develop each single frame for my animations. Besides learning how to use libraries and make magic with p5js, with this project I also learnt to use Illustrator, isn't it awesome?
 
 * **What are your inputs?**
