@@ -1,3 +1,5 @@
+[Click here to play](https://mariaaguilarv.github.io/CIM-640-Creative-Coding/Hw/Final%20Project/index.html)
+
 # Potential ideas
 ## Idea 1
 

@@ -125,8 +125,8 @@ function setup() {
   mic = new p5.AudioIn();
   mic.start();
   var clapping = false;
-  sliderTop = createSlider(0, 1, 0.3, 0.01);
-  sliderBottom = createSlider(0, 1, 0.1, 0.01);
+  // sliderTop = createSlider(0, 1, 0.3, 0.01);
+  // sliderBottom = createSlider(0, 1, 0.1, 0.01);
 
   gravity = createVector(0, 0.2);
 }
@@ -289,32 +289,30 @@ function draw() {
 }
  //fireworks
  var vol = mic.getLevel();
- var thresholdTop = sliderTop.value();
- var thresholdBottom = sliderBottom.value();
+ // var thresholdTop = sliderTop.value();
+ // var thresholdBottom = sliderBottom.value();
+ var thresholdTop = 0.3;
+ var thresholdBottom = 0.1;
  if (vol > thresholdTop && !fireworksOn  && letterTPlay==true && letterGPlay==true && letterMPlay==true) {
    fireworksOn= true;
    // clapping = true;
  }
+ if (fireworksOn==false && letterTPlay == true && letterSPlay==true && letterGPlay==true && letterLPlay==true && letterMPlay==true){
+   fill(0, 255, 0);
+   noStroke();
+   var y = map(vol, 0, 1, height, 0);
+   rect(width - 50, y, 50, height - y);
 
- // if (vol < thresholdBottom) {
- //   clapping = false;
- // }
+   var ty = map(thresholdTop, 0, 1, height, 0);
+   stroke(255, 0, 0);
+   strokeWeight(4);
+   line(width - 50, ty, width, ty);
 
- fill(0, 255, 0);
- //console.log(vol);
- noStroke();
- var y = map(vol, 0, 1, height, 0);
- rect(width - 50, y, 50, height - y);
-
- var ty = map(thresholdTop, 0, 1, height, 0);
- stroke(255, 0, 0);
- strokeWeight(4);
- line(width - 50, ty, width, ty);
-
- var by = map(thresholdBottom, 0, 1, height, 0);
- stroke(0, 0, 255);
- strokeWeight(4);
- line(width - 50, by, width, by);
+   var by = map(thresholdBottom, 0, 1, height, 0);
+   stroke(0, 0, 255);
+   strokeWeight(4);
+   line(width - 50, by, width, by);
+ }
 
  if (fireworksOn==true) playfireworks();
 
@@ -361,11 +359,10 @@ function showPresents() {
 
 
 function playfireworks(){
-  // background(16,12,46);
+
   cookieLeftAnimation.visible = false;
   cookieRightAnimation.visible = false;
-  // image (cookieGreetingsImg,50,400);
-   cookieGreetingAnimation.frameDelay = 8;
+  cookieGreetingAnimation.frameDelay = 8;
   animation (cookieGreetingAnimation, 200,460);
 
   stroke(255);
