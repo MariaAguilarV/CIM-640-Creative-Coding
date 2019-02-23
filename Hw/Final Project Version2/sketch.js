@@ -68,7 +68,7 @@ function preload (){
 
 function setup() {
   createCanvas(1000, 600);
-  rectMode(CENTER); //try to make it resizable
+
 
 //stage1
   bubblesStage1 = new Group();
